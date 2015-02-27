@@ -31,7 +31,7 @@
           <file leaf-file-name="flask-onthisday.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="74" column="201" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1275">
+                <state line="33" column="103" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1275">
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -51,7 +51,7 @@
           <file leaf-file-name="onthisday.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="373" column="6" selection-start="464480" selection-end="464480" vertical-scroll-proportion="0.94011974" vertical-offset="5124" max-vertical-offset="6345">
+                <state line="944" column="9" selection-start="489661" selection-end="489661" vertical-scroll-proportion="0.94011974" vertical-offset="13689" max-vertical-offset="15660">
                   <folding>
                     <element signature="e#45361#45546#2" expanded="true" />
                     <element signature="e#45686#45911#2" expanded="true" />
@@ -96,7 +96,7 @@
           <file leaf-file-name="flask-onthisday.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="72" column="4" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1275">
+                <state line="72" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1275">
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -470,15 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="201" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1275">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="536" column="8" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.0" vertical-offset="7830" max-vertical-offset="9435">
@@ -486,9 +477,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="103" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1275">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="6" selection-start="464480" selection-end="464480" vertical-scroll-proportion="0.94011974" vertical-offset="5124" max-vertical-offset="6345">
+        <state line="944" column="9" selection-start="489661" selection-end="489661" vertical-scroll-proportion="0.94011974" vertical-offset="13689" max-vertical-offset="15660">
           <folding>
             <element signature="e#45361#45546#2" expanded="true" />
             <element signature="e#45686#45911#2" expanded="true" />

@@ -31,7 +31,7 @@ def get_articles(year, month, day):
     fields = ['headline', 'shortUrl', 'trailText', 'thumbnail', 'byline', 'standfirst']
 
     #try:
-    url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=10' % \
+    url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
           (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
     content = requests.get(url).json()
     #except Exception as e:
