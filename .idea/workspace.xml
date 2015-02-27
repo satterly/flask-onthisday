@@ -28,10 +28,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.52258855">
       <split-first>
         <leaf>
-          <file leaf-file-name="flask-onthisday.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="flask-onthisday.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="48" column="0" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.37142858" vertical-offset="525" max-vertical-offset="1275">
+                <state line="74" column="201" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1275">
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -48,10 +48,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="onthisday.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="onthisday.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="384" column="0" selection-start="464817" selection-end="464817" vertical-scroll-proportion="-20.32" vertical-offset="4744" max-vertical-offset="5895">
+                <state line="373" column="6" selection-start="464480" selection-end="464480" vertical-scroll-proportion="0.94011974" vertical-offset="5124" max-vertical-offset="6345">
                   <folding>
                     <element signature="e#45361#45546#2" expanded="true" />
                     <element signature="e#45686#45911#2" expanded="true" />
@@ -128,8 +128,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/static/app.css" />
         <option value="$PROJECT_DIR$/page.py" />
-        <option value="$PROJECT_DIR$/templates/onthisday.html" />
         <option value="$PROJECT_DIR$/flask-onthisday.py" />
+        <option value="$PROJECT_DIR$/templates/onthisday.html" />
       </list>
     </option>
   </component>
@@ -463,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="536" column="8" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.0" vertical-offset="7830" max-vertical-offset="9435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="4" selection-start="1346" selection-end="1397" vertical-scroll-proportion="1.1142857" vertical-offset="0" max-vertical-offset="705">
@@ -477,9 +470,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="201" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1275">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="536" column="8" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.0" vertical-offset="7830" max-vertical-offset="9435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="384" column="0" selection-start="464817" selection-end="464817" vertical-scroll-proportion="-20.32" vertical-offset="4744" max-vertical-offset="5895">
+        <state line="373" column="6" selection-start="464480" selection-end="464480" vertical-scroll-proportion="0.94011974" vertical-offset="5124" max-vertical-offset="6345">
           <folding>
             <element signature="e#45361#45546#2" expanded="true" />
             <element signature="e#45686#45911#2" expanded="true" />
@@ -494,15 +503,6 @@
             <element signature="e#338998#375419#2" expanded="true" />
             <element signature="e#375473#395530#2" expanded="true" />
             <element signature="e#395602#431851#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask-onthisday.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.37142858" vertical-offset="525" max-vertical-offset="1275">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

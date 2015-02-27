@@ -70,9 +70,9 @@ def onthisday(year, month, day):
     this_day = datetime(year, month, day)
     articles = get_articles(year, month, day)
 
-    return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
+    #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
-    #return render_template('onthisday.html', weekday=this_day.strftime('%A'), day=day, month=this_day.strftime('%B'), year=year, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:5])
+    return render_template('onthisday.html', weekday=this_day.strftime('%A'), day=day, month=this_day.strftime('%B'), year=year, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:10])
 
 
 if __name__ == '__main__':

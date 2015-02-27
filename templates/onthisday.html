@@ -345,7 +345,37 @@ if(guardian.isModernBrowser){require(['bootstraps/app'],function(bootstrap){boot
 <div class="fc-slice-wrapper">
 <ul class="u-unstyled l-row  l-row--cols-4 fc-slice fc-slice--q-q-ql-ql">
 
-{% for article in articles %}
+{% for article in articles[:5] %}
+
+    <li class="fc-slice__item l-row__item l-row__item--span-1 u-faux-block-link">
+    <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="music/2015/feb/27/paul-mccartney-childhood-home-sells-for-150000" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
+    <div class="fc-item__container">
+    <div class="fc-item__media-wrapper">
+    <div class="fc-item__image-container u-responsive-ratio ">
+    <img class="responsive-img" src="{{ article.fields.thumbnail }}">
+    </div>
+    </div>
+    <div class="fc-item__content">
+    <div class="fc-item__header">
+    <h2 class="fc-item__title"><a href="{{ article.webUrl }}" class="fc-item__link" data-link-name="article"><span class="fc-item__kicker">{{ article.sectionName }}</span> <span class="u-faux-block-link__cta fc-item__headline">{{ article.fields.headline }}</span></a></h2>
+    </div>
+    <div class="fc-item__standfirst">{{ article.fields.standfirst }}</div>
+    <aside class="fc-item__meta js-item__meta">
+    <a class="fc-trail__count fc-trail__count--commentcount" href="{{ article.webUrl }}#comments" data-link-name="Comment count">{{ article.comments }} comments</a></aside>
+    </div>
+    <a href="{{ article.webUrl }}" class="u-faux-block-link__overlay" data-link-name="article" tabindex="-1">{{ article.webTitle }}</a>
+    </div>
+    </div>
+    </li>
+
+{%  endfor %}
+
+</ul>
+</div>
+<div class="fc-slice-wrapper">
+<ul class="u-unstyled l-row  l-row--cols-4 fc-slice fc-slice--q-q-ql-ql">
+
+{% for article in articles[5:] %}
 
     <li class="fc-slice__item l-row__item l-row__item--span-1 u-faux-block-link">
     <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="music/2015/feb/27/paul-mccartney-childhood-home-sells-for-150000" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
