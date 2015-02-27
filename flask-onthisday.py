@@ -1,8 +1,7 @@
-import json
 import requests
 
 from datetime import datetime
-from flask import Flask
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -22,12 +21,17 @@ def today():
 @app.route('/<int:year>/<int:month>/<int:day>')
 def onthisday(year, month, day):
 
+
+    this_day = datetime(year, month, day)
+
     try:
         from_date = '%s-%02d-%02d' % (year, month, day)
         to_date = '%s-%02d-%02d' % (year, month, day+1)
 
-        url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=shortUrl&page-size=50' % \
-              (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date)
+        fields = ['headline', 'shortUrl', 'trailText', 'thumbnail', 'byline', 'standfirst']
+
+        url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
+              (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
         content = requests.get(url).json()
     except Exception as e:
         return str(e)
@@ -45,7 +49,9 @@ def onthisday(year, month, day):
         key = article['fields']['shortUrl'].replace('http://gu.com', '')
         article['comments'] = counts.get(key, 0)
 
-    return json.dumps(sorted(articles, key=lambda k: k['comments'], reverse=True))
+    #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
+
+    return render_template('onthisday.html', weekday=this_day.strftime('%A'), day=day, month=this_day.strftime('%B'), year=year, articles=articles[:5])
 
 
 if __name__ == '__main__':
