@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/flask-onthisday$flask_onthisday.coverage" NAME="flask-onthisday Coverage Results" MODIFIED="1425043350387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flask-onthisday$flask_onthisday.coverage" NAME="flask-onthisday Coverage Results" MODIFIED="1425049662041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -25,88 +25,69 @@
     <favorites_list name="flask-onthisday" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52258855">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="onthisday.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/onthisday.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="44" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1275">
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Procfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="onthisday.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="920" column="9" selection-start="0" selection-end="494654" vertical-scroll-proportion="-4.625" vertical-offset="13689" max-vertical-offset="15660">
-                  <folding>
-                    <element signature="e#45361#45546#2" expanded="true" />
-                    <element signature="e#45686#45911#2" expanded="true" />
-                    <element signature="e#172922#192463#2" expanded="true" />
-                    <element signature="e#192532#211253#2" expanded="true" />
-                    <element signature="e#211322#230735#2" expanded="true" />
-                    <element signature="e#230804#241909#2" expanded="true" />
-                    <element signature="e#243333#278790#2" expanded="true" />
-                    <element signature="e#278848#299481#2" expanded="true" />
-                    <element signature="e#299557#318826#2" expanded="true" />
-                    <element signature="e#320191#337604#2" expanded="true" />
-                    <element signature="e#338998#375419#2" expanded="true" />
-                    <element signature="e#375473#395530#2" expanded="true" />
-                    <element signature="e#395602#431851#2" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/app.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="13" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/requirements.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="16" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="onthisday.py" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/onthisday.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="72" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="2.1" vertical-offset="30" max-vertical-offset="1275">
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="onthisday.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/onthisday.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="1.11" vertical-offset="525" max-vertical-offset="1275">
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onthisday.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="333" column="86" selection-start="462583" selection-end="462583" vertical-scroll-proportion="-11.25" vertical-offset="4725" max-vertical-offset="15660">
+              <folding>
+                <element signature="e#45361#45546#2" expanded="true" />
+                <element signature="e#45686#45911#2" expanded="true" />
+                <element signature="e#172922#192463#2" expanded="true" />
+                <element signature="e#192532#211253#2" expanded="true" />
+                <element signature="e#211322#230735#2" expanded="true" />
+                <element signature="e#230804#241909#2" expanded="true" />
+                <element signature="e#243333#278790#2" expanded="true" />
+                <element signature="e#278848#299481#2" expanded="true" />
+                <element signature="e#299557#318826#2" expanded="true" />
+                <element signature="e#320191#337604#2" expanded="true" />
+                <element signature="e#338998#375419#2" expanded="true" />
+                <element signature="e#375473#395530#2" expanded="true" />
+                <element signature="e#395602#431851#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="16" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -119,9 +100,10 @@
         <option value="$PROJECT_DIR$/static/app.css" />
         <option value="$PROJECT_DIR$/page.py" />
         <option value="$PROJECT_DIR$/flask-onthisday.py" />
-        <option value="$PROJECT_DIR$/templates/onthisday.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/templates/onthisday.html" />
+        <option value="$PROJECT_DIR$/onthisday.py" />
       </list>
     </option>
   </component>
@@ -441,6 +423,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="536" column="8" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.3345725" vertical-offset="7830" max-vertical-offset="9435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
@@ -448,9 +444,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="16" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/onthisday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="920" column="9" selection-start="0" selection-end="494654" vertical-scroll-proportion="-4.625" vertical-offset="13689" max-vertical-offset="15660">
+        <state line="333" column="86" selection-start="462583" selection-end="462583" vertical-scroll-proportion="-11.25" vertical-offset="4725" max-vertical-offset="15660">
           <folding>
             <element signature="e#45361#45546#2" expanded="true" />
             <element signature="e#45686#45911#2" expanded="true" />
@@ -469,30 +472,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="536" column="8" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.3345725" vertical-offset="7830" max-vertical-offset="9435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/onthisday.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="2.1" vertical-offset="30" max-vertical-offset="1275">
+        <state line="72" column="4" selection-start="2146" selection-end="2146" vertical-scroll-proportion="1.11" vertical-offset="525" max-vertical-offset="1275">
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
