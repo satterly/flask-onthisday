@@ -1,7 +1,7 @@
 import requests
 
 from datetime import datetime
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, redirect, url_for, jsonify
 
 app = Flask(__name__)
 
@@ -56,6 +56,11 @@ def get_articles(year, month, day):
 
     return results
 
+
+@app.route('/')
+def index():
+
+    return redirect(url_for('today'))
 
 @app.route('/today')
 def today():
