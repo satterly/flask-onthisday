@@ -1,0 +1,1 @@
+web: gunicorn onthisday:app --log-file=-
