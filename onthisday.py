@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 CONTENT_API_URL = 'http://content.guardianapis.com'
-CONTENT_API_KEY = 'gnm-hackday'
+CONTENT_API_KEY = 'test'
 
 DISCUSSION_API_URL = 'http://discussion.guardianapis.com/discussion-api'
 
@@ -25,8 +25,8 @@ def get_comment_counts(keys):
 
 def get_articles(year, month, day):
 
-    from_date = '%s-%02d-%02d' % (year, month, day)
-    to_date = '%s-%02d-%02d' % (year, month, day+1)
+    from_date = '%s-%02d-%02dT00:00:00' % (year, month, day)
+    to_date = '%s-%02d-%02dT23:59:59' % (year, month, day)
 
     fields = ['headline', 'shortUrl', 'trailText', 'thumbnail', 'byline', 'standfirst']
 
