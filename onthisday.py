@@ -30,12 +30,12 @@ def get_articles(year, month, day):
 
     fields = ['headline', 'shortUrl', 'trailText', 'thumbnail', 'byline', 'standfirst']
 
-    #try:
-    url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
-          (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
-    content = requests.get(url).json()
-    #except Exception as e:
-    #    return str(e)
+    try:
+        url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
+              (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
+        content = requests.get(url).json()
+    except Exception as e:
+        return str(e)
     results = content['response']['results']
     counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in results])
 
@@ -72,7 +72,10 @@ def today():
 @app.route('/<int:year>/<int:month>/<int:day>')
 def onthisday(year, month, day):
 
-    this_day = datetime(year, month, day)
+    try:
+        this_day = datetime(year, month, day)
+    except ValueError as e:
+        return render_template('400.html', message=str(e))
     articles = get_articles(year, month, day)
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
