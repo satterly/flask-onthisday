@@ -963,7 +963,7 @@ video
 <div class="fc-container__inner">
 <div class="fc-container__header js-container__header">
 <div class="fc-container__header__title">
-<span tabindex="0">On this day</span>
+<span tabindex="0">on this day</span>
 
     <div class="fc-today">
     <span class="fc-today__dayofweek js-dayofweek">{{ weekday }}</span>
@@ -982,7 +982,7 @@ video
 {% for article in articles[:5] %}
 
     <li class="fc-slice__item l-row__item l-row__item--span-1 u-faux-block-link">
-    <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="music/2015/feb/27/paul-mccartney-childhood-home-sells-for-150000" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
+    <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="{{ article.id }}" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
     <div class="fc-item__container">
     <div class="fc-item__media-wrapper">
     <div class="fc-item__image-container u-responsive-ratio ">
@@ -991,7 +991,7 @@ video
     </div>
     <div class="fc-item__content">
     <div class="fc-item__header">
-    <h2 class="fc-item__title"><a href="{{ article.webUrl }}" class="fc-item__link" data-link-name="article"><span class="fc-item__kicker">{{ article.sectionName }}</span> <span class="u-faux-block-link__cta fc-item__headline">{{ article.fields.headline }}</span></a></h2>
+    <h2 class="fc-item__title"><a href="{{ article.webUrl }}" class="fc-item__link" data-link-name="article"><span class="fc-item__kicker">{{ article.sectionName }}</span> <span class="u-faux-block-link__cta fc-item__headline">{{ article.fields.headline | safe }}</span></a></h2>
     </div>
     <div class="fc-item__standfirst">{{ article.fields.standfirst }}</div>
     <aside class="fc-item__meta js-item__meta">
@@ -1006,13 +1006,14 @@ video
 
 </ul>
 </div>
+
 <div class="fc-slice-wrapper">
 <ul class="u-unstyled l-row  l-row--cols-4 fc-slice fc-slice--q-q-ql-ql">
 
 {% for article in articles[5:] %}
 
     <li class="fc-slice__item l-row__item l-row__item--span-1 u-faux-block-link">
-    <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="music/2015/feb/27/paul-mccartney-childhood-home-sells-for-150000" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
+    <div class="fc-item fc-item--has-image fc-item--has-metadata js-fc-item tone-news--item fc-item--list-media-mobile fc-item--standard-tablet js-snappable" data-discussion-closed="false" data-discussion-url="{{ article.webUrl }}#comments" data-link-name="news | 1" data-id="{{ article.id }}" data-item-visibility="all" data-test-id="facia-card" data-node-uid="21">
     <div class="fc-item__container">
     <div class="fc-item__media-wrapper">
     <div class="fc-item__image-container u-responsive-ratio ">
@@ -1021,7 +1022,7 @@ video
     </div>
     <div class="fc-item__content">
     <div class="fc-item__header">
-    <h2 class="fc-item__title"><a href="{{ article.webUrl }}" class="fc-item__link" data-link-name="article"><span class="fc-item__kicker">{{ article.sectionName }}</span> <span class="u-faux-block-link__cta fc-item__headline">{{ article.fields.headline }}</span></a></h2>
+    <h2 class="fc-item__title"><a href="{{ article.webUrl }}" class="fc-item__link" data-link-name="article"><span class="fc-item__kicker">{{ article.sectionName }}</span> <span class="u-faux-block-link__cta fc-item__headline">{{ article.fields.headline | safe }}</span></a></h2>
     </div>
     <div class="fc-item__standfirst">{{ article.fields.standfirst }}</div>
     <aside class="fc-item__meta js-item__meta">
@@ -1036,6 +1037,7 @@ video
 
 </ul>
 </div>
+
 <div class="js-show-more-placeholder"></div>
 <button class="button button--medium button--primary button--show-more collection__show-more js-show-more-button" data-test-id="show-more" data-link-name="more">
 <i class="i i-plus-white"></i><span class="js-button-text">More from this day</span>
