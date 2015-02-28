@@ -1,3 +1,4 @@
+import os
 import requests
 
 from datetime import datetime
@@ -7,7 +8,7 @@ app = Flask(__name__)
 
 
 CONTENT_API_URL = 'http://content.guardianapis.com'
-CONTENT_API_KEY = 'test'
+CONTENT_API_KEY = os.environ.get('CONTENT_API_KEY', 'test')
 
 DISCUSSION_API_URL = 'http://discussion.guardianapis.com/discussion-api'
 
@@ -34,9 +35,9 @@ def get_articles(year, month, day):
         url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
               (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
         content = requests.get(url).json()
-    except Exception as e:
-        return str(e)
-    results = content['response']['results']
+        results = content['response']['results']
+    except Exception:
+        raise
     counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in results])
 
     for article in results:
@@ -75,8 +76,12 @@ def onthisday(year, month, day):
     try:
         this_day = datetime(year, month, day)
     except ValueError as e:
-        return render_template('400.html', message=str(e))
-    articles = get_articles(year, month, day)
+        return render_template('error.html', message=str(e))
+
+    try:
+        articles = get_articles(year, month, day)
+    except Exception:
+        return render_template('error.html', message="something unexpected went wrong")
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
