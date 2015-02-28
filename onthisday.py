@@ -37,7 +37,7 @@ def get_articles(year, month, day):
         content = requests.get(url).json()
         results = content['response']['results']
     except Exception:
-        raise
+        raise RuntimeError("there was a problem getting the list of articles")
     counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in results])
 
     for article in results:
@@ -70,22 +70,24 @@ def today():
 
     return onthisday(today.year, today.month, today.day)
 
-@app.route('/<int:year>/<int:month>/<int:day>')
-def onthisday(year, month, day):
+@app.route('/<int:year>/<int:mon>/<int:day>')
+def onthisday(year, mon, day):
 
     try:
-        this_day = datetime(year, month, day)
+        this_day = datetime(year, mon, day)
+        month = this_day.strftime('%B')
+        weekday = this_day.strftime('%A')
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
 
     try:
-        articles = get_articles(year, month, day)
-    except Exception:
-        return render_template('error.html', message="something unexpected went wrong"), 500
+        articles = get_articles(year, mon, day)
+    except Exception as e:
+        return render_template('error.html', message=str(e))
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
-    return render_template('onthisday.html', weekday=this_day.strftime('%A'), day=day, month=this_day.strftime('%B'), year=year, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:10])
+    return render_template('onthisday.html', weekday=weekday, day=day, month=month, year=year, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:10])
 
 
 if __name__ == '__main__':
