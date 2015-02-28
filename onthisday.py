@@ -76,12 +76,12 @@ def onthisday(year, month, day):
     try:
         this_day = datetime(year, month, day)
     except ValueError as e:
-        return render_template('error.html', message=str(e))
+        return render_template('error.html', message=str(e)), 400
 
     try:
         articles = get_articles(year, month, day)
     except Exception:
-        return render_template('error.html', message="something unexpected went wrong")
+        return render_template('error.html', message="something unexpected went wrong"), 500
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
