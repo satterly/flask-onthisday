@@ -21,6 +21,8 @@ def get_comment_counts(keys):
     except Exception as e:
         return str(e)
 
+    print counts
+
     return counts
 
 
@@ -31,20 +33,22 @@ def get_articles(year, month, day):
 
     fields = ['headline', 'shortUrl', 'trailText', 'thumbnail', 'byline', 'standfirst']
 
+    r = 'foo'
     try:
         url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
               (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
-        content = requests.get(url).json()
-        results = content['response']['results']
+        r = requests.get(url)
+        json = r.json()
+        results = json['response']['results']
     except Exception:
-        raise RuntimeError("there was a problem getting the list of articles")
+        raise RuntimeError(r.text)
     counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in results])
 
     for article in results:
         key = article['fields']['shortUrl'].replace('http://gu.com', '')
         article['comments'] = counts.get(key, 0)
 
-    pages = content['response']['pages']
+    pages = json['response']['pages']
     for page in range(2, pages+1):
         content = requests.get(url, params={'page': page}).json()
         next = content['response']['results']
@@ -83,7 +87,7 @@ def onthisday(year, mon, day):
     try:
         articles = get_articles(year, mon, day)
     except Exception as e:
-        return render_template('error.html', message=str(e))
+        return render_template('error.html', error=str(e))
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
