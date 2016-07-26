@@ -7,10 +7,10 @@ from flask import Flask, render_template, redirect, url_for, jsonify
 app = Flask(__name__)
 
 
-CONTENT_API_URL = 'http://content.guardianapis.com'
+CONTENT_API_URL = 'https://content.guardianapis.com'
 CONTENT_API_KEY = os.environ.get('CONTENT_API_KEY', 'test')
 
-DISCUSSION_API_URL = 'http://discussion.guardianapis.com/discussion-api'
+DISCUSSION_API_URL = 'https://discussion.guardianapis.com/discussion-api'
 
 
 def get_comment_counts(keys):
@@ -35,17 +35,17 @@ def get_articles(year, month, day):
 
     r = 'foo'
     try:
-        url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100' % \
+        url = '%s/search?api-key=%s&from-date=%s&to-date=%s&use-date=published&show-fields=%s&page-size=100&commentable=true' % \
               (CONTENT_API_URL, CONTENT_API_KEY, from_date, to_date, ','.join(fields))
         r = requests.get(url)
         json = r.json()
         results = json['response']['results']
     except Exception:
         raise RuntimeError(r.text)
-    counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in results])
+    counts = get_comment_counts([a['fields']['shortUrl'].replace('https://gu.com', '') for a in results])
 
     for article in results:
-        key = article['fields']['shortUrl'].replace('http://gu.com', '')
+        key = article['fields']['shortUrl'].replace('https://gu.com', '')
         article['comments'] = counts.get(key, 0)
 
     pages = json['response']['pages']
@@ -53,9 +53,9 @@ def get_articles(year, month, day):
         content = requests.get(url, params={'page': page}).json()
         next = content['response']['results']
 
-        counts = get_comment_counts([a['fields']['shortUrl'].replace('http://gu.com', '') for a in next])
+        counts = get_comment_counts([a['fields']['shortUrl'].replace('https://gu.com', '') for a in next])
         for article in next:
-            key = article['fields']['shortUrl'].replace('http://gu.com', '')
+            key = article['fields']['shortUrl'].replace('https://gu.com', '')
             article['comments'] = counts.get(key, 0)
         results += next
 
@@ -71,8 +71,7 @@ def index():
 def today():
 
     today = datetime.today()
-
-    return onthisday(today.year, today.month, today.day)
+    return redirect('/%s/%s/%s' % (today.year, today.month, today.day))
 
 @app.route('/<int:year>/<int:mon>/<int:day>')
 def onthisday(year, mon, day):
