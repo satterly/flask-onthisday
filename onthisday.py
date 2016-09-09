@@ -1,7 +1,7 @@
 import os
 import requests
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask, render_template, redirect, url_for, jsonify
 
 app = Flask(__name__)
@@ -71,7 +71,7 @@ def index():
 def today():
 
     today = datetime.today()
-    return redirect('/%s/%s/%s' % (today.year, today.month, today.day))
+    return redirect('/%s' % today.strftime("%Y/%m/%d"))
 
 @app.route('/<int:year>/<int:mon>/<int:day>')
 def onthisday(year, mon, day):
@@ -83,6 +83,8 @@ def onthisday(year, mon, day):
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
 
+    yesterday = (this_day - timedelta(days=1)).strftime("%Y/%m/%d")
+
     try:
         articles = get_articles(year, mon, day)
     except Exception as e:
@@ -90,7 +92,7 @@ def onthisday(year, mon, day):
 
     #return jsonify(articles=sorted(articles, key=lambda k: k['comments'], reverse=True))
 
-    return render_template('onthisday.html', weekday=weekday, day=day, month=month, year=year, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:10])
+    return render_template('onthisday.html', weekday=weekday, day=day, month=month, year=year, yesterday=yesterday, articles=sorted(articles, key=lambda k: k['comments'], reverse=True)[:10])
 
 
 if __name__ == '__main__':
